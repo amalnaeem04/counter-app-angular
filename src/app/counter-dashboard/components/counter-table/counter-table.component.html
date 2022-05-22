@@ -1,0 +1,33 @@
+
+
+<button class="btn btn-primary pull-right my-4 mx-3 add-button" (click)="openAddModal()">
+  Add
+</button>
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th>No.</th>
+    <th>TeamID</th>
+    <th>Team Name</th>
+    <th>Step Count</th>
+    
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let item of counters; let i = index">
+    <td>{{ 0 + (i + 1) }}</td>
+    <td>{{ item.id }}  </td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.stepCount }}</td>
+    
+
+    
+  </tr>
+  </tbody>
+</table>
+<app-counter-modal></app-counter-modal>
+
+
+

@@ -1,0 +1,44 @@
+<ng-template #content let-modal>
+    <div class="modal-header bg-dark text-white modal-header-color">
+      <div class="modal-title">
+        <div >
+          <h4 id="modal-basic-title">Add New Counter</h4>
+        </div>
+      </div>
+  
+      <button type="button" class="close text-white" aria-label="Close" (click)="modal.dismiss(); ">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body p-4">
+      <form [formGroup]="form">
+        <div class="row">
+  
+          <div class="col-6">
+            <div class="form-group">
+              <label class="font-weight-bold">User ID</label>
+              <input type="number" class="form-control" formControlName="userId"/>
+                <div *ngIf="form.controls['userId'].errors?.required">
+                User ID is required.
+                </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="form-group">
+              <label class="font-weight-bold">Team ID</label>
+              <input type="number" class="form-control" formControlName="teamId"/>
+                <div *ngIf="form.controls['teamId'].errors?.required">
+                Team ID is required.
+                </div>
+            </div>
+          </div>
+
+      
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" [disabled]="!form.valid" (click)="createCounter()">Create</button>
+    </div>
+  </ng-template>
