@@ -9,6 +9,5 @@ import { Component } from '@angular/core';
   `
 })
 export class AppComponent {
-  //#96C8A2, #D0F0C0
   title : string= 'counter-app';
 }

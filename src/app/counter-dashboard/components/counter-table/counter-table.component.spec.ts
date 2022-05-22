@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterTableComponent } from './counter-table.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientModule } from '@angular/common/http';
+
 
 describe('CountersTableComponent', () => {
   let component: CounterTableComponent;
@@ -8,6 +11,7 @@ describe('CountersTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule, HttpClientModule],
       declarations: [ CounterTableComponent ]
     })
     .compileComponents();

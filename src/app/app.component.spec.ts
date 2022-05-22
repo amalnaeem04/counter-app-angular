@@ -1,23 +1,24 @@
-import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+
 import { RouterTestingModule } from '@angular/router/testing';
-import { CounterModalComponent } from './add-counter-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
 
 
 describe('CountersTableComponent', () => {
-  let component: CounterModalComponent;
-  let fixture: ComponentFixture<CounterModalComponent>;
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule, HttpClientModule],
-      declarations: [ CounterModalComponent ]
+      declarations: [ AppComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CounterModalComponent);
+    fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
